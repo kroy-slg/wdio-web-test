@@ -1,0 +1,25 @@
+{
+  "name": "wdio-web-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio run ./wdio.conf.ts",
+    "generate-report": "allure generate allure-results --clean && allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.0.1",
+    "@wdio/allure-reporter": "^9.21.0",
+    "@wdio/cli": "^9.21.1",
+    "@wdio/cucumber-framework": "^9.21.0",
+    "@wdio/globals": "^9.17.0",
+    "@wdio/local-runner": "^9.21.0",
+    "@wdio/spec-reporter": "^9.20.0",
+    "allure-commandline": "^2.36.0",
+    "dotenv": "^17.2.3",
+    "expect-webdriverio": "^5.5.0"
+  }
+}
