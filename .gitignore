@@ -1,0 +1,14 @@
+# Logs
+*.log
+
+# Directories & files
+node_modules/
+allure-results
+allure-report
+.env
+package-lock.json
+
+# Editor files
+.idea
+.vscode
+.tsbuild
