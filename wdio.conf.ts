@@ -5,9 +5,13 @@ export const config: Options.Testrunner = {
     specs: ['./src/features/**/*.feature'],
     maxInstances: 1,
 
+    // @ts-ignore
     capabilities: [{
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        'goog:chromeOptions': {
+            args: ['--disable-notifications']
+        }
     }],
 
     logLevel: 'info',
