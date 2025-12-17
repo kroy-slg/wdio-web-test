@@ -12,7 +12,7 @@ export default class basePage {
 
     async waitForPageLoad() {
         await browser.waitUntil(
-            async () => (await browser.execute(() => document.readyState === 'complete')),
+            async () => (await browser.execute(() => document.readyState === 'complete',{ timeout: 300000, timeoutMsg: 'Page did not load in 10s' })),
         );
     }
 }
