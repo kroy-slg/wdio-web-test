@@ -1,6 +1,8 @@
-Feature: Flipkart Product Search
+Feature: Flipkart product search feature
 
-  Scenario: Search for a product on Flipkart
-    Given user is on Flipkart home page
-    When user searches for "iPhone"
-    Then search results should be displayed
+  Background:
+    Given User is on flipkart home page
+
+  Scenario: Search for a product on flipkart
+    When User searches for "iPhone"
+    Then Search results should be displayed

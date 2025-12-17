@@ -4,7 +4,7 @@ export default class basePage {
         await browser.url(path)
     }
 
-    async waitForElement(el: WebdriverIO.Element) {
+    async waitForElement(el: ChainablePromiseElement) {
         await el.waitForDisplayed()
     }
 }

@@ -2,16 +2,16 @@ import { Given, When, Then } from '@wdio/cucumber-framework'
 import homePage from "../pages/homePage";
 import {searchPage} from "../pages/searchPage";
 
-Given('user is on Flipkart home page', async () => {
-    await browser.url('/')
-    await homePage.closePopupIfPresent()
+Given(/^User is on flipkart home page$/, async () => {
+    await homePage.open('/');
+    await homePage.closePopupIfPresent();
 })
 
-When('user searches for {string}', async (product: string) => {
-    await homePage.searchProduct(product)
+When(/^User searches for "(.*)"$/, async (product: string) => {
+    await homePage.searchProduct(product);
 })
 
-Then('search results should be displayed', async () => {
-    await searchPage.verifyResultsDisplayed()
+Then(/^Search results should be displayed$/, async () => {
+    await searchPage.waitForElement(searchPage.productTitles[0]);
     await expect(await searchPage.productTitles.length).toBeGreaterThan(0);
 })

@@ -1,5 +1,7 @@
-Feature: Flipkart Login
+Feature: Flipkart login feature
 
-  Scenario: Verify Flipkart home page
-    Given user opens Flipkart website
-    Then user should see Flipkart title
+  Background:
+    Given User is on flipkart home page
+
+  Scenario: Verify flipkart home page
+    Then User should see flipkart title
