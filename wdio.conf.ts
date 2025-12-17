@@ -1,4 +1,5 @@
 import type { Options } from '@wdio/types'
+import {URLS} from "./src/constants/urls";
 
 export const config: Options.Testrunner = {
     runner: 'local',
@@ -15,7 +16,7 @@ export const config: Options.Testrunner = {
     }],
 
     logLevel: 'info',
-    baseUrl: 'https://www.flipkart.com',
+    baseUrl: URLS.BASE_URL,
     waitforTimeout: 10000,
 
     framework: 'cucumber',
@@ -23,9 +24,10 @@ export const config: Options.Testrunner = {
     reporters: [
         'spec',
         ['allure', {
-            outputDir: 'allure-results',
+            outputDir: 'reports/allure-results',
             disableWebdriverStepsReporting: true,
-            disableWebdriverScreenshotsReporting: false
+            disableWebdriverScreenshotsReporting: false,
+            useCucumberStepReporter: true
         }]
     ],
 

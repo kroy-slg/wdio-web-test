@@ -3,6 +3,7 @@
 
 # Directories & files
 node_modules/
+reports
 allure-results
 allure-report
 .env
